@@ -28,10 +28,8 @@ status_label = tk.Label(
 )
 status_label.pack()
 
-
 canvas = tk.Canvas(root, width=950, height=580, bg="darkgreen", highlightthickness=0)
 canvas.pack(pady=10)
-
 
 canvas.create_rectangle(390, 0, 560, 580, fill="gray25", outline="")
 
