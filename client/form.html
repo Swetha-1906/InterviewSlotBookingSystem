@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interview Slot Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #cce7ff, #e6f2ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus {
+            border-color: #0077b6;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0,119,182,0.3);
+        }
+
+        input[type="submit"] {
+            background-color: #0077b6;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005f8a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Interview Slot Booking</h2>
+
+    <form action="http://localhost/cgi-bin/book.py" method="post">
+        
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Date</label>
+        <input type="date" name="date" required>
+
+        <label>Slot</label>
+        <select name="slot">
+            <option value="10:00-11:00">10:00 - 11:00</option>
+            <option value="11:00-12:00">11:00 - 12:00</option>
+            <option value="2:00-3:00">2:00 - 3:00</option>
+        </select>
+
+        <input type="submit" value="Book Slot">
+
+    </form>
+</div>
+
+</body>
+</html>
